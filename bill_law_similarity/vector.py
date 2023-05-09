@@ -17,8 +17,6 @@ def load_nlp(lang):
     nlp = spacy.load(
         lang_model_mapping[lang],
         disable=[
-            "morphologizer",
-            "attribute_ruler",
             "ner",
         ],
     )
