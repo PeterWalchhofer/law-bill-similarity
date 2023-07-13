@@ -1,3 +1,4 @@
+from bill_law_similarity.gzip_knn import compression_similarity
 import jaro
 import polars as pl 
 from .deep import BertSimilarity
@@ -144,6 +145,8 @@ def similarity_metrics(df):
             comparison_wrapper(
                 "bill_text", "law_text", jaro.jaro_winkler_metric, "jaro_winkler"
             ),
+            comparison_wrapper(
+                "bill_text", "law_text", compression_similarity, "jaro")
         ]
     )#.drop(["bill_sents", "law_sents", "bill_tokens", "law_tokens", "bill_tags", "law_tags", "bill_lemmas", "law_lemmas", "sec_a_id", "sec_b_id", "sec_a_title", "sec_b_title", "bill_text", "law_text", "label"])
 
