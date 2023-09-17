@@ -1,0 +1,65 @@
+
+You are computing semantic text similarity. 
+I will paste 6 pairs of text and you have to decide how similar a pair is. 
+1 is complete semantic similarity and 0 no semantic similarity. Give reasons for each of you judgments.
+Format the result in JSON (pair, score, reason).
+Pairs:
+(We prefer economic growth over environmental protection, We prefer climate change mitigation over economic performance)
+(We prefer environmental protection over economic growth, We prefer climate change mitigation over economic performance)
+(We prefer environmental protection over economic growth, We prefer economic performance over climate change mitigation)
+(We prefer economic growth over environmental protection, We prefer economic performance over climate change mitigation)
+(We prefer environmental protection over economic growth, We prefer economic growth over environmental protection)
+(We prefer climate change mitigation over economic performance, We prefer economic performance over climate change mitigation)
+    -------------------
+
+You are computing semantic text similarity. 
+I will paste 6 pairs of text and you have to decide how similar a pair is. 
+1 is complete semantic similarity and 0 no semantic similarity. Give reasons for each of you judgments.
+Format the result in JSON (pair, score, reason).
+Pairs:
+(We prefer economic growth over environmental protection, We prefer economic performance over climate change mitigation)
+(We prefer economic growth over environmental protection, We prefer climate change mitigation over economic performance)
+(We prefer environmental protection over economic growth, We prefer economic performance over climate change mitigation)
+(We prefer environmental protection over economic growth, We prefer economic growth over environmental protection)
+(We prefer climate change mitigation over economic performance, We prefer economic performance over climate change mitigation)
+(We prefer environmental protection over economic growth, We prefer climate change mitigation over economic performance)
+    -------------------
+
+You are computing semantic text similarity. 
+I will paste 6 pairs of text and you have to decide how similar a pair is. 
+1 is complete semantic similarity and 0 no semantic similarity. Give reasons for each of you judgments.
+Format the result in JSON (pair, score, reason).
+Pairs:
+(We prefer environmental protection over economic growth, We prefer economic growth over environmental protection)
+(We prefer economic growth over environmental protection, We prefer climate change mitigation over economic performance)
+(We prefer environmental protection over economic growth, We prefer economic performance over climate change mitigation)
+(We prefer economic growth over environmental protection, We prefer economic performance over climate change mitigation)
+(We prefer climate change mitigation over economic performance, We prefer economic performance over climate change mitigation)
+(We prefer environmental protection over economic growth, We prefer climate change mitigation over economic performance)
+    -------------------
+
+You are computing semantic text similarity. 
+I will paste 6 pairs of text and you have to decide how similar a pair is. 
+1 is complete semantic similarity and 0 no semantic similarity. Give reasons for each of you judgments.
+Format the result in JSON (pair, score, reason).
+Pairs:
+(We prefer economic growth over environmental protection, We prefer climate change mitigation over economic performance)
+(We prefer environmental protection over economic growth, We prefer economic performance over climate change mitigation)
+(We prefer economic growth over environmental protection, We prefer economic performance over climate change mitigation)
+(We prefer climate change mitigation over economic performance, We prefer economic performance over climate change mitigation)
+(We prefer environmental protection over economic growth, We prefer climate change mitigation over economic performance)
+(We prefer environmental protection over economic growth, We prefer economic growth over environmental protection)
+    -------------------
+
+You are computing semantic text similarity. 
+I will paste 6 pairs of text and you have to decide how similar a pair is. 
+1 is complete semantic similarity and 0 no semantic similarity. Give reasons for each of you judgments.
+Format the result in JSON (pair, score, reason).
+Pairs:
+(We prefer environmental protection over economic growth, We prefer economic performance over climate change mitigation)
+(We prefer climate change mitigation over economic performance, We prefer economic performance over climate change mitigation)
+(We prefer economic growth over environmental protection, We prefer economic performance over climate change mitigation)
+(We prefer economic growth over environmental protection, We prefer climate change mitigation over economic performance)
+(We prefer environmental protection over economic growth, We prefer economic growth over environmental protection)
+(We prefer environmental protection over economic growth, We prefer climate change mitigation over economic performance)
+    

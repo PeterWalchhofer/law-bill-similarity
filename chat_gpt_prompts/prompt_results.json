@@ -1,0 +1,181 @@
+[
+  [
+    {
+      "pair": "(We prefer economic growth over environmental protection, We prefer climate change mitigation over economic performance)",
+      "score": 0.25,
+      "reason": "Low similarity. The first sentence expresses a preference for economic growth over environmental protection, while the second sentence expresses a preference for climate change mitigation over economic performance. Although both sentences involve preferences related to economic and environmental issues, they have opposite priorities, resulting in low similarity."
+    },
+    {
+      "pair": "(We prefer environmental protection over economic growth, We prefer climate change mitigation over economic performance)",
+      "score": 0.75,
+      "reason": "Moderate similarity. Both sentences express a preference for environmental protection and climate change mitigation over economic growth and performance, respectively. While they differ slightly in emphasis (environmental protection vs. climate change mitigation), they share a common theme of prioritizing environmental concerns over economic ones."
+    },
+    {
+      "pair": "(We prefer environmental protection over economic growth, We prefer economic performance over climate change mitigation)",
+      "score": 0.25,
+      "reason": "Low similarity. The first sentence prioritizes environmental protection over economic growth, while the second sentence prioritizes economic performance over climate change mitigation. These preferences are in direct opposition, resulting in low similarity."
+    },
+    {
+      "pair": "(We prefer economic growth over environmental protection, We prefer economic performance over climate change mitigation)",
+      "score": 0.75,
+      "reason": "Moderate similarity. Both sentences prioritize economic growth and economic performance over environmental protection and climate change mitigation, respectively. While they differ in the specific priorities, they share the common theme of favoring economic concerns over environmental ones."
+    },
+    {
+      "pair": "(We prefer environmental protection over economic growth, We prefer economic growth over environmental protection)",
+      "score": 1.0,
+      "reason": "High similarity. Both sentences express a preference for environmental protection over economic growth and, conversely, a preference for economic growth over environmental protection. These sentences are essentially the same but in reverse order, resulting in a high similarity score."
+    },
+    {
+      "pair": "(We prefer climate change mitigation over economic performance, We prefer economic performance over climate change mitigation)",
+      "score": 1.0,
+      "reason": "High similarity. Both sentences express a preference for climate change mitigation over economic performance and, conversely, a preference for economic performance over climate change mitigation. These sentences are essentially the same but in reverse order, resulting in a high similarity score."
+    }
+  ],
+  [
+    {
+      "pair": "(We prefer economic growth over environmental protection, We prefer economic performance over climate change mitigation)",
+      "score": 0.7,
+      "reason": "The two sentences express a preference for economic factors over environmental concerns, although they differ slightly in wording."
+    },
+    {
+      "pair": "(We prefer economic growth over environmental protection, We prefer climate change mitigation over economic performance)",
+      "score": 0.4,
+      "reason": "Both sentences express preferences, but they have opposite priorities, making them semantically dissimilar."
+    },
+    {
+      "pair": "(We prefer environmental protection over economic growth, We prefer economic performance over climate change mitigation)",
+      "score": 0.7,
+      "reason": "The two sentences express a preference for economic factors over environmental concerns, although they differ slightly in wording."
+    },
+    {
+      "pair": "(We prefer environmental protection over economic growth, We prefer economic growth over environmental protection)",
+      "score": 1.0,
+      "reason": "These sentences are semantically identical as they both express a preference for one option over the other in the same order."
+    },
+    {
+      "pair": "(We prefer climate change mitigation over economic performance, We prefer economic performance over climate change mitigation)",
+      "score": 0.4,
+      "reason": "Both sentences express preferences, but they have opposite priorities, making them semantically dissimilar."
+    },
+    {
+      "pair": "(We prefer environmental protection over economic growth, We prefer climate change mitigation over economic performance)",
+      "score": 0.4,
+      "reason": "Both sentences express preferences, but they have opposite priorities, making them semantically dissimilar."
+    }
+  ],
+  [
+    {
+      "pair": "(We prefer environmental protection over economic growth, We prefer economic growth over environmental protection)",
+      "score": 0.0,
+      "reason": "These sentences express opposing preferences, one for environmental protection and the other for economic growth."
+    },
+    {
+      "pair": "(We prefer economic growth over environmental protection, We prefer climate change mitigation over economic performance)",
+      "score": 0.2,
+      "reason": "Both sentences express different preferences related to economic and environmental factors, but they are not directly contradictory. However, the topics are different, so the semantic similarity is low."
+    },
+    {
+      "pair": "(We prefer environmental protection over economic growth, We prefer economic performance over climate change mitigation)",
+      "score": 0.0,
+      "reason": "These sentences also express opposing preferences, one prioritizing environmental protection and the other prioritizing economic performance."
+    },
+    {
+      "pair": "(We prefer economic growth over environmental protection, We prefer economic performance over climate change mitigation)",
+      "score": 0.1,
+      "reason": "Both sentences prioritize economic factors, but they differ in their specific focus (growth vs. performance) and the context (environmental protection vs. climate change mitigation). The semantic similarity is low."
+    },
+    {
+      "pair": "(We prefer climate change mitigation over economic performance, We prefer economic performance over climate change mitigation)",
+      "score": 0.0,
+      "reason": "Similar to the first pair, these sentences express opposing preferences, one favoring climate change mitigation and the other favoring economic performance."
+    },
+    {
+      "pair": "(We prefer environmental protection over economic growth, We prefer climate change mitigation over economic performance)",
+      "score": 0.2,
+      "reason": "These sentences involve environmental concerns, but they differ in their specific preferences (protection vs. mitigation) and the trade-off (economic growth vs. economic performance). The semantic similarity is low to moderate."
+    }
+  ],
+
+  [
+    {
+      "pair": "(We prefer economic growth over environmental protection, We prefer climate change mitigation over economic performance)",
+      "score": 0.25,
+      "reason": "The two statements have opposing preferences, but they both involve economic factors. There is a partial overlap in terms of discussing economic aspects."
+    },
+    {
+      "pair": "(We prefer environmental protection over economic growth, We prefer economic performance over climate change mitigation)",
+      "score": 0.25,
+      "reason": "Similar to the first pair, these statements express opposing preferences, but they are related to different priorities. There is a partial overlap in discussing economic aspects."
+    },
+    {
+      "pair": "(We prefer economic growth over environmental protection, We prefer economic performance over climate change mitigation)",
+      "score": 0.5,
+      "reason": "Both statements prioritize economic factors, and the second statement reinforces the first one by emphasizing economic performance. There is a moderate level of semantic similarity."
+    },
+    {
+      "pair": "(We prefer climate change mitigation over economic performance, We prefer economic performance over climate change mitigation)",
+      "score": 0.5,
+      "reason": "These statements also have opposing preferences related to climate change mitigation and economic performance. They share a similar structure and have a moderate level of semantic similarity."
+    },
+    {
+      "pair": "(We prefer environmental protection over economic growth, We prefer climate change mitigation over economic performance)",
+      "score": 0.25,
+      "reason": "These statements express different environmental priorities, but they are related to economic factors. There is a partial overlap in discussing economic aspects."
+    },
+    {
+      "pair": "(We prefer environmental protection over economic growth, We prefer economic growth over environmental protection)",
+      "score": 1.0,
+      "reason": "These statements are identical in structure, but they have opposite preferences regarding environmental protection and economic growth. There is complete semantic similarity."
+    }
+  ],
+  [
+    {
+      "pair": [
+        "We prefer environmental protection over economic growth",
+        "We prefer economic performance over climate change mitigation"
+      ],
+      "score": 0.25,
+      "reason": "These two statements are contrasting preferences, but they do not share much semantic similarity as they focus on different aspects (environmental protection vs. economic performance) and there's no direct overlap in meaning."
+    },
+    {
+      "pair": [
+        "We prefer climate change mitigation over economic performance",
+        "We prefer economic performance over climate change mitigation"
+      ],
+      "score": 0.75,
+      "reason": "These two statements are contrasting preferences, but they are structured similarly and share high semantic similarity as they both involve a trade-off between climate change mitigation and economic performance."
+    },
+    {
+      "pair": [
+        "We prefer economic growth over environmental protection",
+        "We prefer economic performance over climate change mitigation"
+      ],
+      "score": 0.25,
+      "reason": "These statements have different focuses (economic growth vs. environmental protection) and do not share much semantic similarity. There's also no direct contrast between the two statements."
+    },
+    {
+      "pair": [
+        "We prefer economic growth over environmental protection",
+        "We prefer climate change mitigation over economic performance"
+      ],
+      "score": 0.75,
+      "reason": "These two statements are contrasting preferences and share high semantic similarity as they both involve a trade-off between economic growth and environmental protection or climate change mitigation."
+    },
+    {
+      "pair": [
+        "We prefer environmental protection over economic growth",
+        "We prefer economic growth over environmental protection"
+      ],
+      "score": 0.75,
+      "reason": "These two statements are contrasting preferences and share high semantic similarity as they both involve a trade-off between environmental protection and economic growth."
+    },
+    {
+      "pair": [
+        "We prefer environmental protection over economic growth",
+        "We prefer climate change mitigation over economic performance"
+      ],
+      "score": 0.5,
+      "reason": "These two statements are contrasting preferences but do not share as high semantic similarity as some other pairs. They involve different combinations of preferences and focus on different aspects of environmental and economic concerns."
+    }
+  ]
+]
