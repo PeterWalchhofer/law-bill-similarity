@@ -1,9 +1,9 @@
-from bill_law_similarity.gzip_knn import compression_similarity
+from bill_law_similarity.gzip_knn import compression_similarity, compression_similarity_array
 import jaro
 import polars as pl 
 from .deep import BertSimilarity
 from .docu_toads import docu_toads_similarity
-from .bow import bow_overlap, bow_pos_overlap
+from .word_overlap import word_overlap, word_pos_overlap
 from polars import col
 from .string_diff import diff, sw_align
 from .vector import compute_cosine_similarity, preprocess
@@ -28,7 +28,7 @@ def comparison_wrapper(col_a, col_b, func, name):
     )
 
 
-def pos_bow_ol_wrapper(col_a, col_b, col_a_tags, col_b_tags, func, name):
+def word_pos_ol_wrapper(col_a, col_b, col_a_tags, col_b_tags, func, name):
     return (
         pl.struct(
             [pl.col(col_a), pl.col(col_b), pl.col(col_a_tags), pl.col(col_b_tags)]
@@ -46,20 +46,6 @@ def comparison_wrapper(col_a, col_b, func, name):
     return (
         pl.struct([pl.col(col_a), pl.col(col_b)])
         .apply(lambda x_dict: func(x_dict[col_a], x_dict[col_b]))
-        .alias(name)
-    )
-
-
-def pos_bow_ol_wrapper(col_a, col_b, col_a_tags, col_b_tags, func, name):
-    return (
-        pl.struct(
-            [pl.col(col_a), pl.col(col_b), pl.col(col_a_tags), pl.col(col_b_tags)]
-        )
-        .apply(
-            lambda x_dict: func(
-                x_dict[col_a], x_dict[col_a_tags], x_dict[col_b], x_dict[col_b_tags]
-            )
-        )
         .alias(name)
     )
 
@@ -94,59 +80,62 @@ def similarity_metrics(df):
               comparison_wrapper(
                 "bill_lemmas", "law_lemmas", docu_toads_similarity, "docu_toads_lemma"
             ),
-            # BOW Overlap
-            comparison_wrapper("bill_tokens", "law_tokens", bow_overlap, "bow_ol"),
+            # Word Overlap
+            comparison_wrapper("bill_tokens", "law_tokens", word_overlap, "word_ol"),
             comparison_wrapper(
                 "bill_tokens",
                 "law_tokens",
-                lambda a, b: bow_overlap(a, b, 2),
-                "bow_ol_bigrams",
+                lambda a, b: word_overlap(a, b, 2),
+                "word_ol_bigrams",
             ),
-            comparison_wrapper("bill_lemmas", "law_lemmas", bow_overlap, "bow_ol_lemma"),
+            comparison_wrapper("bill_lemmas", "law_lemmas", word_overlap, "word_ol_lemma"),
             comparison_wrapper(
                "bill_lemmas", "law_lemmas",
-                lambda a, b: bow_overlap(a, b, 2),
-                "bow_ol_bigrams_lemma",
+                lambda a, b: word_overlap(a, b, 2),
+                "word_ol_bigrams_lemma",
             ),
-            # POS BOW Overlap
-            pos_bow_ol_wrapper(
+            # POS Word Overlap
+            word_pos_ol_wrapper(
                 "bill_tokens",
                 "law_tokens",
                 "bill_tags",
                 "law_tags",
-                bow_pos_overlap,
-                "pos_bow_ol",
+                word_pos_overlap,
+                "word_pos_ol",
             ),
-            pos_bow_ol_wrapper(
+            word_pos_ol_wrapper(
                 "bill_tokens",
                 "law_tokens",
                 "bill_tags",
                 "law_tags",
-                lambda a, b, c, d: bow_pos_overlap(a, b, c, d, 2),
-                "pos_bow_bigrams",
+                lambda a, b, c, d: word_pos_overlap(a, b, c, d, 2),
+                "word_pos_bigrams",
             ),
-            pos_bow_ol_wrapper(
+            word_pos_ol_wrapper(
                 "bill_lemmas",
                 "law_lemmas",
                 "bill_tags",
                 "law_tags",
-                bow_pos_overlap,
-                "pos_bow_ol_lemma",
+                word_pos_overlap,
+                "word_pos_ol_lemma",
             ),
-            pos_bow_ol_wrapper(
+            word_pos_ol_wrapper(
                 "bill_lemmas",
                 "law_lemmas",
                 "bill_tags",
                 "law_tags",
-                lambda a, b, c, d: bow_pos_overlap(a, b, c, d, 2),
-                "pos_bow_bigrams_lemma",
+                lambda a, b, c, d: word_pos_overlap(a, b, c, d, 2),
+                "word_pos_bigrams_lemma",
             ),
             # Jaro Winkler
             comparison_wrapper(
                 "bill_text", "law_text", jaro.jaro_winkler_metric, "jaro_winkler"
             ),
+            # Compression similarity (GZIP-KNN)
             comparison_wrapper(
-                "bill_text", "law_text", compression_similarity, "jaro")
+                        "bill_lemmas", "law_lemmas",compression_similarity_array, "gzip_lemma"),
+            comparison_wrapper(
+                        "bill_text", "law_text",compression_similarity, "gzip_text"),
         ]
     )#.drop(["bill_sents", "law_sents", "bill_tokens", "law_tokens", "bill_tags", "law_tags", "bill_lemmas", "law_lemmas", "sec_a_id", "sec_b_id", "sec_a_title", "sec_b_title", "bill_text", "law_text", "label"])
 
